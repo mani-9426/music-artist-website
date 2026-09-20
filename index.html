@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AIRA | Music Artist</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#home">AIRA 🎵</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#music">Music</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <div class="container text-center">
+        <p class="small-title">WELCOME TO THE WORLD OF</p>
+
+        <h1>AIRA</h1>
+
+        <p class="tagline">
+            Feel the Music. Live the Moment.
+        </p>
+
+        <a href="#music" class="btn btn-primary">
+            🎧 Listen Now
+        </a>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+                <div class="artist-card">
+                    <div class="music-icon">🎤</div>
+                    <h2>AIRA</h2>
+                    <p>Independent Music Artist</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h2 class="section-title">About The Artist</h2>
+
+                <p>
+                    Aira is an independent music artist who creates
+                    meaningful songs inspired by life, emotions and
+                    everyday experiences.
+                </p>
+
+                <p>
+                    Her music combines melody, modern sounds and
+                    emotional storytelling to connect with listeners.
+                </p>
+
+                <button class="btn btn-outline-light" onclick="showMessage()">
+                    Know More
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- MUSIC -->
+<section id="music" class="section music-section">
+    <div class="container">
+
+        <h2 class="section-title text-center">My Music 🎧</h2>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text"
+                   id="songSearch"
+                   class="form-control"
+                   placeholder="Search songs..."
+                   onkeyup="searchSongs()">
+        </div>
+
+        <div class="row g-4 mt-3">
+
+            <div class="col-md-4 song">
+                <div class="song-card">
+                    <div class="album-icon">🎵</div>
+                    <h4>Moonlight</h4>
+                    <p>Aira • Single</p>
+                    <button class="btn btn-primary"
+                            onclick="playSong('Moonlight')">
+                        ▶ Play
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-4 song">
+                <div class="song-card">
+                    <div class="album-icon">🎶</div>
+                    <h4>Dreamer</h4>
+                    <p>Aira • Single</p>
+                    <button class="btn btn-primary"
+                            onclick="playSong('Dreamer')">
+                        ▶ Play
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-4 song">
+                <div class="song-card">
+                    <div class="album-icon">🎼</div>
+                    <h4>Rainy Days</h4>
+                    <p>Aira • Album</p>
+                    <button class="btn btn-primary"
+                            onclick="playSong('Rainy Days')">
+                        ▶ Play
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="player" class="player">
+            Select a song to start 🎧
+        </div>
+
+    </div>
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+    <div class="container">
+
+        <h2 class="section-title text-center">Gallery 📸</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="gallery-box">🎤<br>Live Performance</div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-box">🎸<br>Studio Session</div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-box">🎵<br>Music Event</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- EVENTS -->
+<section id="events" class="section music-section">
+    <div class="container">
+
+        <h2 class="section-title text-center">Upcoming Events 📅</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <div class="event-card">
+                    <h4>Live Music Night</h4>
+                    <p>📅 15 October 2026</p>
+                    <p>📍 Chennai</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="event-card">
+                    <h4>Acoustic Evening</h4>
+                    <p>📅 28 October 2026</p>
+                    <p>📍 Pondicherry</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <div class="container">
+
+        <h2 class="section-title text-center">Contact Me 📩</h2>
+
+        <div class="contact-box">
+
+            <input type="text"
+                   id="name"
+                   class="form-control"
+                   placeholder="Your Name">
+
+            <input type="email"
+                   id="email"
+                   class="form-control mt-3"
+                   placeholder="Your Email">
+
+            <textarea id="message"
+                      class="form-control mt-3"
+                      rows="4"
+                      placeholder="Your Message"></textarea>
+
+            <button class="btn btn-primary mt-3"
+                    onclick="sendMessage()">
+                Send Message
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 AIRA Music. All Rights Reserved.</p>
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0d0d14;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-link {
+    margin-left: 15px;
+}
+
+/* HOME */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #17172a, #42145f);
+    padding-top: 70px;
+}
+
+.small-title {
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: 90px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.tagline {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.btn-primary {
+    border: none;
+    padding: 10px 25px;
+}
+
+/* SECTIONS */
+
+.section {
+    padding: 100px 0;
+}
+
+.music-section {
+    background: #151521;
+}
+
+.section-title {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+/* ABOUT */
+
+.artist-card {
+    min-height: 300px;
+    background: linear-gradient(135deg, #33204a, #151521);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.music-icon {
+    font-size: 80px;
+}
+
+/* MUSIC */
+
+.search-box {
+    max-width: 500px;
+    margin: auto;
+}
+
+.song-card {
+    background: #211f2d;
+    border-radius: 18px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.song-card:hover {
+    transform: translateY(-8px);
+}
+
+.album-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.player {
+    text-align: center;
+    margin-top: 35px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #292638;
+}
+
+/* GALLERY */
+
+.gallery-box {
+    height: 220px;
+    background: linear-gradient(135deg, #352047, #1d1d2c);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    line-height: 2;
+}
+
+/* EVENTS */
+
+.event-card {
+    background: #211f2d;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* CONTACT */
+
+.contact-box {
+    max-width: 650px;
+    margin: auto;
+}
+
+.form-control {
+    padding: 13px;
+}
+
+/* FOOTER */
+
+footer {
+    background: black;
+    text-align: center;
+    padding: 25px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 70px 20px;
+    }
+}
